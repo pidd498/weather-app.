@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Weather Forecast Indonesia</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- CHART JS -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div class="app">
+
+  <header>
+    <h1>🌦️ Weather Forecast</h1>
+    <p id="lokasiText">Memuat lokasi...</p>
+    <button id="darkToggle">🌙</button>
+  </header>
+
+  <section class="search">
+    <input id="kabupaten" placeholder="Kabupaten">
+    <input id="kecamatan" placeholder="Kecamatan">
+    <input id="desa" placeholder="Desa">
+    <button id="btnCari">Cari Cuaca</button>
+    <button id="btnGPS">📍 Lokasi Saya</button>
+  </section>
+
+  <!-- SKELETON -->
+  <section id="loading" class="card hidden">
+    <p>⏳ Memuat data cuaca...</p>
+  </section>
+
+  <section id="infoHarian" class="card hidden"></section>
+
+  <!-- CHART -->
+  <section class="card hidden" id="chartBox">
+    <canvas id="tempChart"></canvas>
+  </section>
+
+  <section id="listCuaca" class="grid"></section>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
